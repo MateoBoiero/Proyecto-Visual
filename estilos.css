@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'open sans'
+}
+
+.contenedor{
+    padding: 0px;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+.titulo{
+    color: #642a73;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+/*HEADER*/
+ header{
+    width: 100%;
+    height:550px;
+    background: #bc4e9c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.6), hsla(317, 45%, 52%, 0.4)), url(/img/portada.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, hsla(340, 95%, 50%, 0.6), hsla(317, 45%, 52%, 0.4)), url(/img/portada.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-size: cover;
+background-attachment:fixed;
+position: relative;
+}
+
+nav{
+    text-align: right;
+    padding: 30px 50px 0px 0px;
+}
+
+nav > a{
+    color:black;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+nav > a:hover{
+    text-decoration:underline;
+}
+
+nav > a:visited{
+    color:white;
+}
+
+header .texto-header{
+    display: flex; /*no usar top bot eigt left*/
+    height:400px;
+    width: 100%;
+    align-items: center; /*alineacion horizontal*/
+    justify-content: center; /*alineacion vertical*/
+    flex-direction: column;
+    text-align: center;
+}
+
+.texto-header h1{
+    color:white;
+    font-size: 50px;
+}
+
+.texto-header h2{
+    color: white;
+    font-size: 30px;
+    font-weight: 300;
+
+}
+
+
+.wave{
+    position: absolute; /*header con position relative*/
+    bottom: 0px;
+    width: 100%;
+}
+
+/*about us*/
+.contenedor-sobre-nosotros img{
+    width: 48%;
+}
+.sobre-nosotros .contenido-textos{
+    width: 48%;
+}
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+}
+.contenido-textos h3{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.contenido-textos h3 span{
+    background-color: #4d0866;
+    color: white;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    box-shadow:0px 0px 6px 1px rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+
+.contenido-textos p{
+    padding-bottom: 30px;
+    padding-left: 31px;
+    font-weight: 300;
+}
+
+/*Galeria*/
+
+
+.portafolio {
+    background:#f2f2f2;
+}
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /*sin esto estarina las 8 imagenes encima de las otras*/
+}
+.imagen-port{
+    width: 24%;
+    height: auto;
+    margin-bottom: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    position: relative;
+}
+
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(273, 91%, 27%, .7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 50px;
+}
+
+.hover-galeria p{
+    color:white;
+}
+
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+
+/*Clientes*/
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+.cards .card{ 
+    background-color: #4d0866;
+    display: flex;
+    width: 40%;
+    height: 150px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+} 
+
+.cards .card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid white;
+    border-radius: 50%;
+    display: block;
+}
+
+.cards .card > .contenido-texto-card{
+    width: 60%;
+    color: white;
+}
+
+.cards .card > .contenido-texto-card p{
+    padding-top: 5px;
+    font-weight: 300;
+    font-size: 15px;
+    text-align: right;
+}
+.cards .card > .contenido-texto-card h4{
+    font-size: 20px;
+    text-align: right;
+}
+
+/* Our Team */
+
+.about-services{
+    background:white ;
+    padding-bottom: 30px;
+}
+
+.servicio-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.servicio-ind{
+    width: 28%;
+    text-align: center;
+}
+
+.servicio-ind img{
+    width: 100%;
+    height: 300px;
+}
+
+.servicio-ind h3{
+    margin: 10px 0;
+}
+
+.servicio-ind p{
+    font-weight: 300;
+    text-align: center;
+}
+
+/*Footer*/
+footer{
+    background-color: #414141;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom:50px;
+    border-bottom:1px solid white ;
+}
+.content-foo{
+    text-align: center;
+}
+
+.content-foo h4{
+    color: white;
+    /*text-decoration: underline 4px #4d0866;*/
+    border-bottom: #4d0866 solid 3px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.content-foo p{
+    color: white;
+}
+.titulo-final{
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: white;
+    text-align: end;
+    margin-right: 4.5%;
+}
